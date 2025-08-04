@@ -4,20 +4,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="cchead64.png" />
+
   <title>Carnage Cafe | swedish metal</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <header class="top-bar">
-    <img src="carnage_logo_menu.png" alt="Carnage Cafe Logo">
-    <a href="https://www.youtube.com/@CarnageCafeSWEDEN" target="_blank" rel="noopener noreferrer">YouTube</a>
-    <a href="https://www.instagram.com/carnagecafe/" target="_blank" rel="noopener noreferrer">Instagram</a>
-    <a href="https://www.facebook.com/CarnageCafeSweden/" target="_blank" rel="noopener noreferrer">Facebook</a>
+    <img src="carnage_logo_menu.png" class="top-logo" alt="Carnage Cafe logo">
+
+    <div class="menu-container">
+      <button class="menu-toggle" id="menuToggle">&#9776;</button>
+      <nav class="menu" id="mobileMenu">
+        <a href="https://www.youtube.com/@CarnageCafeSWEDEN" target="_blank" rel="noopener noreferrer">YouTube</a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+      </nav>
+    </div>
   </header>
 
   <div class="bg-image"></div>
-
   <video autoplay muted loop playsinline id="bg-video">
     <source src="bg_vid.mp4" type="video/mp4" />
   </video>
@@ -34,6 +41,16 @@
       </a>
     </div>
   </div>
+
+  <script>
+    const toggleButton = document.getElementById("menuToggle");
+    const menu = document.getElementById("mobileMenu");
+
+    toggleButton.addEventListener("click", () => {
+      menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+    });
+  </script>
+
 </body>
 
 </html>
