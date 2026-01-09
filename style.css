@@ -121,3 +121,20 @@
     .spotify-thumb:hover {
       transform: scale(1.05);
     }
+
+.contact {
+  padding-top: 36px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  color: #cecece;
+  text-decoration: none;
+  padding: 8px 16px;
+  background-color: rgba(0, 0, 0, 0.6);
+ }
+
+.contact:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
